@@ -1,0 +1,21 @@
+http://www.rabbitmq.com/install-rpm.html
+1安装rabbit mq以前需要安装关联的包，erlang；建议整体安装包https://github.com/jasonmcintosh/esl-erlang-compat/releases/download/1.1.1/esl-erlang-compat-18.1-1.noarch.rpm版本。或者直接用yum 源安装
+2.下载erlang RPM  http://www.rabbitmq.com/releases/erlang/ 并安装
+3. rpm 包安装完毕后，配置运行
+4.配置环境变量：
+创建或者编辑 rabbitmq-env.conf  （默认安装后在/etc/rabbitmq/）
+简单示例如下：
+#example rabbitmq-env.conf file entries
+#Rename the node
+NODENAME=bunny@myhost
+#Config file location and new filename bunnies.config
+CONFIG_FILE=/etc/rabbitmq/testdir/bunnies
+
+很多配置被简化, 省略了前缀
+如：RABBITMQ_NODE_PORT
+为：NODE_PORT
+
+具体可以查看
+man rabbitmq-server
+man rabbitmq-env.conf
+man rabbitmqctl
